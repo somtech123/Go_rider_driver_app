@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_rider_driver_app/ui/features/authentication/signup/presentation/view/widget/signup_body_view.dart';
 import 'package:go_rider_driver_app/ui/shared/shared_widget/circular_container.dart';
 import 'package:go_rider_driver_app/ui/shared/top_widget/full_top_widget.dart';
 import 'package:go_rider_driver_app/utils/app_constant/app_color.dart';
@@ -49,7 +50,7 @@ class SignUpScreen extends StatelessWidget {
                                       ),
                                   children: [
                                     TextSpan(
-                                        text: 'Login your account',
+                                        text: 'Create an Account',
                                         style: Theme.of(context)
                                             .textTheme
                                             .bodyLarge!
@@ -68,12 +69,11 @@ class SignUpScreen extends StatelessWidget {
                             height: height - 75.h,
                             width: width,
                             child: CircularContainerWidget(
-                              color: AppColor.secondaryColor,
-                              height: height - 75.h,
-                              width: width,
-                              borderRaduis: 30.r,
-                              //  child: const SignUpBodyWidget(),
-                            ),
+                                color: AppColor.secondaryColor,
+                                height: height - 75.h,
+                                width: width,
+                                borderRaduis: 30.r,
+                                child: const SignUpBodyWidget()),
                           ),
                         )
                       ],

@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_rider_driver_app/app/resouces/app_router.dart';
 import 'package:go_rider_driver_app/app/resouces/navigation_services.dart';
 import 'package:go_rider_driver_app/ui/features/authentication/login/presentation/bloc/login_bloc.dart';
+import 'package:go_rider_driver_app/ui/features/authentication/signup/presentation/bloc/signup_bloc.dart';
 import 'package:go_rider_driver_app/utils/app_constant/app_theme.dart';
 import 'package:go_rider_driver_app/utils/app_wrapper/app_wrapper.dart';
 import 'package:provider/provider.dart';
@@ -21,7 +22,10 @@ class _GoRiderState extends State<GoRider> {
   Widget build(BuildContext context) {
     return ScreenUtilInit(builder: (context, child) {
       return MultiBlocProvider(
-        providers: [BlocProvider<LoginBloc>(create: (context) => LoginBloc())],
+        providers: [
+          BlocProvider<LoginBloc>(create: (context) => LoginBloc()),
+          BlocProvider<SignUpBloc>(create: (context) => SignUpBloc()),
+        ],
         child: ChangeNotifierProvider(
           create: (_) {},
           child: AppMainWrapper(
