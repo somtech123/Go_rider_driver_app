@@ -1,6 +1,7 @@
 import 'package:go_rider_driver_app/app/resouces/app_transition.dart';
 import 'package:go_rider_driver_app/app/resouces/navigation_services.dart';
 import 'package:go_rider_driver_app/ui/features/authentication/login/presentation/view/login_screen.dart';
+import 'package:go_rider_driver_app/ui/features/authentication/setup_account/presentation/view/setup_account.dart';
 import 'package:go_rider_driver_app/ui/features/authentication/signup/presentation/view/signup.dart';
 import 'package:go_rider_driver_app/ui/features/dashboard/presentation/view/home_screen.dart';
 import 'package:go_rider_driver_app/ui/features/splash/splash_screen.dart';
@@ -19,6 +20,11 @@ class AppRouter {
         path: '/signUp',
         pageBuilder: (context, state) => CustomSlideTransition(
             key: state.pageKey, child: const SignUpScreen()),
+      ),
+      GoRoute(
+        path: '/setupAccount',
+        pageBuilder: (context, state) => CustomSlideTransition(
+            key: state.pageKey, child: const SetUpAccountScreen()),
       ),
       GoRoute(
           path: '/homePage',

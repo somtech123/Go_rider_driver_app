@@ -162,16 +162,17 @@ class _SignUpBodyWidgetState extends State<SignUpBodyWidget> {
                 SizedBox(height: 30.h),
                 PrimaryButton(
                   onPressed: () {
-                    if (formKey.currentState!.validate()) {
-                      log.w('Creating account');
-                      SystemChannels.textInput.invokeMethod('TextInput.hide');
+                    context.push('/setupAccount');
+                    // if (formKey.currentState!.validate()) {
+                    //   log.w('Creating account');
+                    //   SystemChannels.textInput.invokeMethod('TextInput.hide');
 
-                      signupBloc.add(SignUp(
-                          context: context,
-                          email: emailController.text,
-                          password: passwordController.text,
-                          username: userNameController.text));
-                    }
+                    //   signupBloc.add(SignUp(
+                    //       context: context,
+                    //       email: emailController.text,
+                    //       password: passwordController.text,
+                    //       username: userNameController.text));
+                    // }
                   },
                   label: AppStrings.siginup,
                 ),

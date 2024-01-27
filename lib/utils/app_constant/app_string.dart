@@ -24,4 +24,14 @@ class AppStrings {
   static const String help = 'Help';
   static const String invite = 'Invite a Friend';
   static const String logout = 'Log out';
+
+  static const String becomeDriver =
+      'Make money driving with Gorider, set your schedule and earn extra money by driving!';
+
+  static const String carModel = 'Ride Model';
+  static const String carPLate = 'Car Plate';
+  static const String carColor = 'Ride Color';
+  static const String phone = 'Phone Number';
+
+  static const String next = 'Finish';
 }
