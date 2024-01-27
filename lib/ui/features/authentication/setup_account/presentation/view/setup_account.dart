@@ -16,61 +16,63 @@ class SetUpAccountScreen extends StatelessWidget {
       body: WillPopScope(
         child: SafeArea(
           child: GestureDetector(
-            child: SizedBox(
-              height: height,
-              width: width,
-              child: Flexible(
-                  child: SizedBox(
-                height: height,
-                width: width,
-                child: Stack(children: [
-                  CircularContainerWidget(
-                    height: 100.h,
-                    width: width,
-                    borderRaduis: 0,
-                    color: AppColor.primaryColor,
-                    child: FullTopBarWidget(
-                      title: RichText(
-                        text: TextSpan(
-                            text: 'Let\'s Get Started\n',
-                            style:
-                                Theme.of(context).textTheme.bodyLarge!.copyWith(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold,
-                                      color: AppColor.whiteColor,
-                                    ),
-                            children: [
-                              TextSpan(
-                                  text: 'Drive and earn',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyLarge!
-                                      .copyWith(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w600,
-                                        color: AppColor.whiteColor,
-                                      ))
-                            ]),
+              child: Column(
+            children: [
+              Flexible(
+                child: SizedBox(
+                  height: height,
+                  width: width,
+                  child: Stack(children: [
+                    CircularContainerWidget(
+                      height: 100.h,
+                      width: width,
+                      borderRaduis: 0,
+                      color: AppColor.primaryColor,
+                      child: FullTopBarWidget(
+                        title: RichText(
+                          text: TextSpan(
+                              text: 'Let\'s Get Started\n',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyLarge!
+                                  .copyWith(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold,
+                                    color: AppColor.whiteColor,
+                                  ),
+                              children: [
+                                TextSpan(
+                                    text: 'Drive and earn',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyLarge!
+                                        .copyWith(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w600,
+                                          color: AppColor.whiteColor,
+                                        ))
+                              ]),
+                        ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    top: 80.h,
-                    child: SizedBox(
-                      height: height - 75.h,
-                      width: width,
-                      child: CircularContainerWidget(
-                          color: AppColor.secondaryColor,
-                          height: height - 75.h,
-                          width: width,
-                          borderRaduis: 30.r,
-                          child: const SetUPAccountBody()),
-                    ),
-                  )
-                ]),
-              )),
-            ),
-          ),
+                    Positioned(
+                      top: 80.h,
+                      child: SizedBox(
+                        height: height - 75.h,
+                        width: width,
+                        child: CircularContainerWidget(
+                            color: AppColor.secondaryColor,
+                            height: height - 75.h,
+                            width: width,
+                            borderRaduis: 30.r,
+                            child: const SetUPAccountBody()),
+                      ),
+                    )
+                  ]),
+                ),
+              ),
+            ],
+          )),
         ),
         onWillPop: () async {
           return false;

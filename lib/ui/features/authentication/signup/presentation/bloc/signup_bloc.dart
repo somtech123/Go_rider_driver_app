@@ -53,7 +53,7 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
 
       EasyLoading.showSuccess('Successfully Signup');
 
-      context.replace('/homePage');
+      context.push('/setupAccount');
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
         EasyLoading.dismiss();

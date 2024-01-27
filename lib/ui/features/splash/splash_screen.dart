@@ -30,8 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Future.delayed(const Duration(milliseconds: 2000), () {
-      //  checkIfUserIsLoggedIn();
-      context.replace('/login');
+      checkIfUserIsLoggedIn();
     });
     super.initState();
   }
